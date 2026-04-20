@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+#root {
+  padding: 2rem;
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.book-form,
+.book-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.book-form label,
+.book-item label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.book-form input,
+.book-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.book-form button,
+.book-item button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #dc2626;
+  color: white;
+}
+
+.book-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.book-item {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.book-item .book-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.book-item .book-meta {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  margin-top: 1rem;
+  color: #b91c1c;
+}
+
+.loading-message {
+  margin-top: 1rem;
+}
