@@ -18,7 +18,7 @@ O objetivo foi **desenvolver uma aplicação web moderna para gerenciamento de l
 
 [**Repositório no GitHub (tarefa-20)**](https://github.com/chryspenalber/tarefa-20)
 
-[**Deploy**](https://tarefa-20.vercel.app/)
+[**Deploy**](tarefa-20-typescript.vercel.app)
 
 ---
 
@@ -121,7 +121,7 @@ The goal was to **develop a modern web application for book management using Rea
 
 [**GitHub Repository (tarefa-20)**](https://github.com/chryspenalber/tarefa-20)
 
-[**Deploy**](https://tarefa-20.vercel.app/)
+[**Deploy**](tarefa-20-typescript.vercel.app)
 
 ---
 
