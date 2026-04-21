@@ -46,11 +46,13 @@ function App() {
 
   async function handleToggleStatus(book: Book) {
     try {
-      const updatedBook = await updateBook({
+      const newStatus: 'Lido' | 'Não lido' = book.status === 'Lido' ? 'Não lido' : 'Lido';
+      const updatedBook: Book = {
         ...book,
-        status: book.status === 'Lido' ? 'Não lido' : 'Lido',
-      });
-      setBooks((current: Book[]) => current.map((item) => (item._id === updatedBook._id ? updatedBook : item)));
+        status: newStatus,
+      };
+      await updateBook(updatedBook);
+      setBooks((current: Book[]) => current.map((item) => (item._id === book._id ? updatedBook : item)));
     } catch (err) {
       setError('Não foi possível atualizar o status.');
     }
