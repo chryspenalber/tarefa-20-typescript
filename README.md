@@ -1,207 +1,190 @@
-[Versão em Português](#portugues) | [English Version](#english)
+﻿[Versão em Português](#portugues) | [English Version](#english)
 
 ---
-
 <a id="portugues"></a>
 ## Versão em Português
 
-# Catálogo de Livros - Aplicação React com Vite + TypeScript
+# Catálogo de Livros — React + TypeScript
 **Projeto desenvolvido por Chrys Penalber**
 
-Este projeto faz parte de um exercício prático do **curso de Engenheiro Front-End da EBAC**.
+Aplicação simples que consome uma API REST para listar, criar, atualizar e remover livros. Implementada com **React** e **TypeScript**, empacotada com **Vite** e realizando requisições HTTP com `axios` (ver `src/api.ts`).
 
-O objetivo foi **desenvolver uma aplicação web moderna para gerenciamento de livros utilizando React, Vite e TypeScript**, aplicando conceitos de componentes reutilizáveis, tipagem estática, estado, integração com API e boas práticas de organização de código.
+---
+
+## Objetivos
+
+- Implementar operações básicas de catálogo: listar, adicionar, alternar status (`Lido` / `Não lido`) e remover livros.
+- Demonstrar integração com uma API externa usando `axios` e tipagem com TypeScript.
+- Organizar a interface em componentes reutilizáveis (`BookForm`, `BookList`, `BookItem`).
 
 ---
 
 ## Links
 
-[**Repositório no GitHub (tarefa-20)**](https://github.com/chryspenalber/tarefa-20)
-
-[**Deploy**](tarefa-20-typescript.vercel.app)
-
----
-
-## Objetivo
-
-- Criar uma aplicação React moderna e bem estruturada
-- Desenvolver componentes reutilizáveis (`BookForm`, `BookList`, `BookItem`)
-- Aplicar conceitos fundamentais do React (props, estado e ciclo de vida)
-- Utilizar **TypeScript** para tipagem estática da aplicação
-- Realizar integração com API REST para listar, adicionar, remover e atualizar status de livros
-- Utilizar **Vite** para build rápido e otimizado
+- [**Live Site**](https://tarefa-20-typescript.vercel.app/)
+- [**Repositório no GitHub**](https://github.com/chryspenalber)
 
 ---
 
-## Estrutura de Arquivos
+## Principais Funcionalidades
+
+- Listar livros obtidos de um endpoint (configurado em `src/api.ts`).
+- Adicionar novos livros via formulário (`src/components/BookForm.tsx`).
+- Alternar o status do livro entre `Lido` e `Não lido` com persistência via API.
+- Remover livros individualmente.
+
+---
+
+## Estrutura do Projeto
 
 ```text
-projeto
-|-- index.html
-|-- package.json
-|-- src/
-|   |-- main.tsx
-|   |-- App.tsx
-|   |-- styles.css
-|   |-- api.ts
-|   |-- types.ts
-|   `-- components/
-|       |-- BookForm.tsx
-|       |-- BookItem.tsx
-|       `-- BookList.tsx
+index.html
+package.json
+vite.config.ts
+tsconfig.json
+src/
+  api.ts
+  App.tsx
+  main.tsx
+  styles.css
+  types.ts
+  components/
+    BookForm.tsx
+    BookItem.tsx
+    BookList.tsx
 ```
 
 ---
 
-## Componentes
+## Estilos
 
-- **App.tsx** - Componente raiz com regras de negócio e gerenciamento de estado
-- **BookForm** - Formulário para cadastro de novos livros
-- **BookList** - Renderiza a lista de livros cadastrados
-- **BookItem** - Exibe os dados de cada livro e ações (remover/alterar status)
+- Estilos globais e regras visuais estão em `src/styles.css`.
+- A interface utiliza layout baseado em grid e Flexbox com classes simples para responsividade básica.
 
 ---
 
-## Pré-requisitos
+## Tecnologias
 
-- **Node.js** (v18 ou superior)
-- **npm** ou **yarn**
+- React — Biblioteca de UI
+- TypeScript — Tipagem estática para componentes e lógica
+- Vite — Servidor de desenvolvimento e build rápido
+- Axios — Cliente HTTP usado em `src/api.ts`
+- CSS — Estilos em `src/styles.css`
 
 ---
 
-## Instalação
+## Como executar
+
+1. Instale dependências:
 
 ```bash
 npm install
 ```
 
----
-
-## Execução
-
-Para iniciar o servidor de desenvolvimento:
+2. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível em `http://localhost:5173/`
+3. Abra o endereço fornecido pelo Vite (normalmente `http://localhost:5173`).
 
 ---
 
-## Tecnologias Utilizadas
+## Contato
 
-- **React 18** - Biblioteca para construção de interfaces
-- **TypeScript** - Superset tipado de JavaScript
-- **Vite** - Bundler e servidor de desenvolvimento ultra-rápido
-- **Axios** - Cliente HTTP para comunicação com API REST
-
----
-
-## Autor
-
-- GitHub - [@chryspenalber](https://github.com/chryspenalber)
-- LinkedIn - [Chrystiana Penalber](https://www.linkedin.com/in/chrystiana-penalber/)
+- GitHub — [@chryspenalber](https://github.com/chryspenalber)
+- LinkedIn — [Chrystiana Penalber](https://www.linkedin.com/in/chrystiana-penalber/)
 
 ---
 
 <a id="english"></a>
 ## English Version
 
-# Book Catalog - React Application with Vite + TypeScript
+# Book Catalog — React + TypeScript
 **Project developed by Chrys Penalber**
 
-This project is part of a practical exercise from the **EBAC Front-End Engineering course**.
+Simple application that consumes a REST API to list, create, update and delete books. Built with **React** and **TypeScript**, bundled with **Vite**, and using `axios` for HTTP requests (see `src/api.ts`).
 
-The goal was to **develop a modern web application for book management using React, Vite, and TypeScript**, applying concepts of reusable components, static typing, state management, API integration, and best practices in code organization.
+---
+
+## Goals
+
+- Implement basic catalog operations: list, add, toggle status (`Lido` / `Não lido`) and remove books.
+- Demonstrate integration with an external API using `axios` and TypeScript typings.
+- Keep the UI organized in small reusable components (`BookForm`, `BookList`, `BookItem`).
 
 ---
 
 ## Links
 
-[**GitHub Repository (tarefa-20)**](https://github.com/chryspenalber/tarefa-20)
-
-[**Deploy**](tarefa-20-typescript.vercel.app)
-
----
-
-## Project Goals
-
-- Build a modern and well-structured React application
-- Develop reusable components (`BookForm`, `BookList`, `BookItem`)
-- Apply fundamental React concepts (props, state, lifecycle)
-- Use **TypeScript** for static type safety
-- Integrate with a REST API to list, create, delete, and update book status
-- Use **Vite** for fast and optimized builds
+- [**Live Site**](https://tarefa-20-typescript.vercel.app/)
+- [**GitHub Repository**](https://github.com/chryspenalber)
 
 ---
 
-## File Structure
+## Key Features
+
+- Fetch books from an endpoint configured in `src/api.ts`.
+- Add books via `src/components/BookForm.tsx`.
+- Toggle book status between `Lido` and `Não lido`, persisting changes through the API.
+- Remove books individually.
+
+---
+
+## Project Structure
 
 ```text
-project
-|-- index.html
-|-- package.json
-|-- src/
-|   |-- main.tsx
-|   |-- App.tsx
-|   |-- styles.css
-|   |-- api.ts
-|   |-- types.ts
-|   `-- components/
-|       |-- BookForm.tsx
-|       |-- BookItem.tsx
-|       `-- BookList.tsx
+index.html
+package.json
+vite.config.ts
+tsconfig.json
+src/
+  api.ts
+  App.tsx
+  main.tsx
+  styles.css
+  types.ts
+  components/
+    BookForm.tsx
+    BookItem.tsx
+    BookList.tsx
 ```
 
 ---
 
-## Components
+## Styles
 
-- **App.tsx** - Root component with business rules and state management
-- **BookForm** - Form component to add new books
-- **BookList** - Renders the list of registered books
-- **BookItem** - Displays each book data and actions (delete/toggle status)
+- Global styles are defined in `src/styles.css`.
+- Layout uses CSS Grid and Flexbox with simple utility classes for basic responsiveness.
 
 ---
 
-## Prerequisites
+## Technologies
 
-- **Node.js** (v18 or higher)
-- **npm** or **yarn**
+- React — UI library
+- TypeScript — Static typing for components and logic
+- Vite — Dev server & build tool
+- Axios — HTTP client used in `src/api.ts`
+- CSS — Styling in `src/styles.css`
 
 ---
 
-## Installation
+## How to Run
+
+Install dependencies and start the dev server:
 
 ```bash
 npm install
-```
-
----
-
-## Running the Application
-
-To start the development server:
-
-```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173/`
+Open the address provided by Vite (usually `http://localhost:5173`).
 
 ---
 
-## Technologies Used
+## Author / Contact
 
-- **React 18** - Library for building user interfaces
-- **TypeScript** - Typed superset of JavaScript
-- **Vite** - Ultra-fast bundler and development server
-- **Axios** - HTTP client for REST API communication
+- GitHub — [@chryspenalber](https://github.com/chryspenalber)
+- LinkedIn — [Chrystiana Penalber](https://www.linkedin.com/in/chrystiana-penalber/)
 
----
-
-## Author
-
-- GitHub - [@chryspenalber](https://github.com/chryspenalber)
-- LinkedIn - [Chrystiana Penalber](https://www.linkedin.com/in/chrystiana-penalber/)
